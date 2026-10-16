@@ -1,0 +1,13 @@
+.root{background:var(--light);color:var(--ink);padding:20px 0 13px}.grid{display:grid;gap:10px}.grid article{background:var(--card);border-radius:14px;padding:17px}.grid h2{font-size:26px}.grid ul{list-style:none;padding:0;margin:17px 0 3px;display:grid;gap:19px}.grid li{display:flex;gap:13px;align-items:flex-start;font-size:13px;line-height:1.5}.grid svg{width:25px;height:25px}@media(min-width:768px){.root{padding:50px 0}.grid{grid-template-columns:1fr 1fr;gap:24px}}
+/* motion + design polish */
+@media(hover:hover){.grid article:hover{translate:0 -3px;box-shadow:0 14px 30px #0018121a}}
+@media(min-width:768px){.grid article{padding:36px;border-radius:20px}.grid h2{font-size:34px}.grid li{font-size:17px}.grid svg{width:28px;height:28px}.grid ul{gap:22px}}
+
+/* imersão: refinamentos */
+.root{padding-block:var(--sec)}
+
+/* imersão: refinamentos */
+.grid article{box-shadow:var(--shadow-1)}
+
+/* imersão: refinamentos */
+@media(max-width:767px){.grid li{font-size:15px}}

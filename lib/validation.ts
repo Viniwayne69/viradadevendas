@@ -1,0 +1,5 @@
+import {content} from './content';
+export type Lead={name:string;email:string;phone:string;consent:boolean};
+export type LeadErrors=Partial<Record<keyof Lead,string>>;
+export function validateLead(value:unknown):{lead:Lead;errors:LeadErrors}{const v=(value&&typeof value==='object'?value:{}) as Record<string,unknown>;const lead:Lead={name:typeof v.name==='string'?v.name.trim():'',email:typeof v.email==='string'?v.email.trim():'',phone:typeof v.phone==='string'?v.phone.replace(/\D/g,''):'',consent:v.consent===true};const errors:LeadErrors={};if(lead.name.length>120||!/^\S{2,}\s+\S{2,}/u.test(lead.name))errors.name=content.errors.name;if(lead.email.length>254||!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(lead.email))errors.email=content.errors.email;if(!/^[1-9]{2}(?:9\d{8}|[2-5]\d{7})$/.test(lead.phone))errors.phone=content.errors.phone;if(!lead.consent)errors.consent=content.errors.consent;return{lead,errors}}
+export function maskPhone(raw:string){const v=raw.replace(/\D/g,'').slice(0,11);if(v.length<3)return v?`(${v}`:'';const split=v.length>10?7:6;return `(${v.slice(0,2)}) ${v.slice(2,split)}${v.length>split?'-'+v.slice(split):''}`}

@@ -1,0 +1,15 @@
+.root{padding:23px 0;background:var(--light);color:var(--ink)}.root h2{font-size:24px}.root ul{list-style:none;display:grid;gap:7px;margin:17px 0 0;padding:0}.root li{display:flex;gap:20px;align-items:center;background:var(--card);border-radius:11px;padding:13px;font-size:13px}.root li svg{color:#175940;width:31px;height:31px}.root li:first-child{font-weight:700}@media(min-width:768px){.root{padding:50px 0}.root ul{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:767px){.root h2{font-size:22px;letter-spacing:-1.3px}}
+
+/* motion + design polish */
+@media(hover:hover){.root li:hover{translate:0 -3px;box-shadow:0 12px 28px #0018121a}}
+@media(min-width:768px){.root h2{font-size:38px}.root li{font-size:17px;padding:26px 24px;gap:18px;border-radius:16px}.root li svg{width:44px;height:44px}}
+
+/* imersão: refinamentos */
+.root{padding-block:var(--sec) 0}
+
+/* imersão: refinamentos */
+.root li{box-shadow:var(--shadow-1)}
+
+/* imersão: refinamentos */
+@media(max-width:767px){.root li{font-size:15px}}

@@ -1,0 +1,13 @@
+.root{background:var(--light);color:var(--ink);padding:27px 0 24px}.root h2{font-size:33px;letter-spacing:-1.7px;max-width:560px}.root mark{background:none;position:relative;isolation:isolate;padding:0 9px 0 4px}.root mark:before{content:"";position:absolute;inset:8px -3px 0;background:var(--mint);z-index:-1;clip-path:polygon(3% 12%,98% 0,94% 21%,100% 42%,93% 64%,98% 87%,2% 100%,5% 78%,0 48%,6% 28%)}.root p{color:#274551;line-height:1.45;margin-top:19px;max-width:580px}@media(min-width:768px){.root{padding:55px 0}.root h2{font-size:44px}}
+.line{display:block}
+
+/* motion + design polish */
+.root mark:before{transform-origin:left center;transition:transform .9s .25s cubic-bezier(.6,.1,.2,1)}
+:global([data-armed]) .root mark:not(:global(.r-in)):before{transform:scaleX(0)}
+@media(min-width:768px){.root h2{font-size:54px;max-width:820px}.root p{font-size:20px;max-width:720px}}
+
+/* imersão: refinamentos */
+.root{padding-block:var(--sec)}
+
+/* imersão: refinamentos */
+@media(max-width:767px){.root p{font-size:15.5px}}

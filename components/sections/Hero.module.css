@@ -1,0 +1,29 @@
+.root{position:relative;padding:30px 0 56px;background:radial-gradient(ellipse at 40% 40%,#05382a,var(--dark) 70%)}.grid{position:relative;z-index:1}.intro{text-align:center;margin-bottom:20px}.intro h1 span{display:block;font:italic 52px Georgia,serif;letter-spacing:-3px;line-height:1.05}.intro h1 strong{display:block;color:var(--mint);font:900 italic 79px/.96 var(--font-heading);letter-spacing:-6px;text-shadow:0 0 20px #60faa61c}.intro p{font-size:19px;line-height:1.3;margin:12px auto 0;max-width:330px}.details{display:flex;justify-content:space-between;gap:12px;margin-top:17px}.details>div{display:flex;align-items:center;gap:7px;font-size:11px;line-height:1.15;max-width:110px}.details svg{color:#7cddb0;width:27px;height:27px}.coinOne{left:-65px;top:0;width:120px!important}.coinTwo{right:-45px;top:190px;width:100px!important}.coinThree{right:-30px;bottom:-45px;width:145px!important}@media(min-width:768px){.root{padding:70px 0}.grid{display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:center}.intro h1 strong{font-size:clamp(80px,8vw,115px)}.intro h1 span{font-size:65px}.details{grid-column:1/-1;justify-content:center;gap:60px}.details>div{font-size:14px;max-width:180px}}
+.root{overflow:hidden}
+
+/* motion + design polish */
+@keyframes rise{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:none}}
+@keyframes glowPulse{0%,100%{text-shadow:0 0 20px #60faa61c}50%{text-shadow:0 0 36px #60faa66e}}
+.intro h1 span{animation:rise .8s cubic-bezier(.2,.7,.2,1) both}
+.intro h1 strong{animation:rise .9s .15s cubic-bezier(.2,.7,.2,1) both,glowPulse 4s 1.2s ease-in-out infinite}
+.intro p{animation:rise .8s .35s cubic-bezier(.2,.7,.2,1) both}
+.videoWrap{animation:rise .9s .5s cubic-bezier(.2,.7,.2,1) both}
+.details{animation:rise .8s .75s cubic-bezier(.2,.7,.2,1) both}
+
+/* moeda do canto inferior fora da linha de data, horário e local */
+.root{padding-bottom:112px}
+.coinThree{bottom:-92px;right:-38px}
+@media(min-width:768px){.root{padding:70px 0 90px}.coinThree{bottom:-90px}}
+
+/* imersão: refinamentos */
+.root .coinOne{filter:blur(2.4px)}
+.root .coinTwo{filter:drop-shadow(0 12px 14px #0008)}
+.root .coinThree{filter:blur(1px)}
+
+/* imersão: refinamentos */
+.details span{font-family:var(--font-num),sans-serif;font-weight:700;font-size:15px;letter-spacing:.3px;text-transform:uppercase;line-height:1.1}
+.details>div{max-width:120px}
+@media(min-width:768px){.details span{font-size:20px}.details>div{max-width:220px}}
+
+/* fim do hero mais curto, moeda um pouco mais baixa para não tocar no texto */
+@media(max-width:767px){.root{padding-bottom:92px}.root .coinThree{bottom:-108px}}

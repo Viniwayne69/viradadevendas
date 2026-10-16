@@ -1,0 +1,10 @@
+.root{padding:10px 0 20px;text-align:center;background:var(--dark-deep);position:relative}.logo{display:flex;align-items:center;justify-content:center;gap:17px;font-size:12px}.root p{font-size:10px;color:#a6b5b0;margin-top:24px}
+.root{background:var(--dark-deep);margin-top:-1px}
+
+.root{background:transparent;margin-top:0}
+
+.root{padding-top:4px}
+.root p{margin-top:14px}
+
+/* imersão: refinamentos */
+@media(max-width:767px){.root p{font-size:11px}}

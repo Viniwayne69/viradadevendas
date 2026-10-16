@@ -1,0 +1,3 @@
+.root{background:var(--light);color:var(--dark);padding:20px 0 0}.root p{background:var(--mint);border-radius:8px;padding:9px;display:flex;align-items:center;justify-content:center;gap:10px;font-size:14px}.root svg{stroke:var(--mint);color:var(--dark)}
+/* motion + design polish */
+@media(min-width:768px){.root p{font-size:17px;padding:14px}}

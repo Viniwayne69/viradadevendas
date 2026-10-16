@@ -1,0 +1,22 @@
+.root{padding:27px 0 24px;background:linear-gradient(120deg,#00271d,var(--dark-deep))}.root ol{list-style:none;margin:18px 0 0;padding:0;display:grid;gap:7px}.root li{display:flex;align-items:center;gap:20px;border:1px solid var(--line);background:#062c23;border-radius:11px;padding:6px 12px;font-size:14px;min-height:46px}.root li span{background:var(--mint);color:var(--dark);font-weight:800;border-radius:10px;padding:3px 9px;font-size:19px}@media(min-width:768px){.root{padding:55px 0}.root ol{grid-template-columns:1fr 1fr;gap:15px}}
+/* motion + design polish */
+.root li span{font-family:var(--font-num),sans-serif;font-size:22px;transition:background-color .5s .25s,color .5s .25s}
+:global([data-armed]) .root li:not(:global(.r-in)) span{background:#1c5b48;color:#6fa895}
+@media(hover:hover){.root li:hover{translate:0 -3px;border-color:var(--mint);box-shadow:0 10px 26px #60faa622}}
+@media(min-width:768px){.root h2{font-size:44px}.root li{font-size:18px;min-height:72px;padding:12px 22px;gap:22px;border-radius:14px}.root li span{font-size:27px;padding:4px 12px}}
+@media(min-width:1024px){.root ol{grid-template-columns:repeat(3,1fr)}}
+
+/* imersão: refinamentos */
+.root{padding-block:var(--sec)}
+
+/* imersão: refinamentos */
+.root li{border:1px solid transparent;background:linear-gradient(#062c23,#062c23) padding-box,linear-gradient(135deg,#60faa64d,#1a5443 38%,#194c3c) border-box;box-shadow:var(--hi)}
+
+/* imersão: refinamentos */
+@media(max-width:767px){.root li{font-size:15.5px}}
+
+/* seção colada à anterior de mesmo tom: respiro de cima menor; lista mais compacta */
+@media(max-width:767px){.root{padding-top:12px}.root ol{gap:6px}.root li{min-height:42px}}
+
+/* 4 itens: duas colunas no computador, sem item sozinho na última linha */
+@media(min-width:1024px){.root ol{grid-template-columns:repeat(2,1fr)}}

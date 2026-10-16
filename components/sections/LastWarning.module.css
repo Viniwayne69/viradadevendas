@@ -1,0 +1,32 @@
+.root{padding:27px 0 25px;position:relative;background:linear-gradient(110deg,#002e22,var(--dark-deep))}.content{position:relative;z-index:1;text-align:center}.root h2{display:flex;justify-content:center;align-items:center;gap:12px;font-size:32px;white-space:nowrap}.root h2 svg{width:43px;height:43px;color:#7cddb0;transform:rotate(-12deg)}.root h2 em{color:var(--mint)}.root p{max-width:285px;margin:15px auto 17px;font-size:16px;line-height:1.3}.root a{max-width:420px;margin:auto}.left{left:-70px;bottom:-110px;width:130px!important}.right{right:-75px;bottom:-90px;width:160px!important}@media(min-width:768px){.root{padding:60px 0}.root h2{font-size:44px}.root p{max-width:500px;font-size:20px}}
+.root{overflow:hidden}
+
+/* final igual ao mockup: bloco contínuo com o rodapé, moedas abaixo do botão */
+.root{padding-bottom:84px;background:linear-gradient(180deg,#00291f,var(--dark-deep) 90%)}
+.root a{min-height:56px;padding:14px 28px}
+.left{bottom:-90px;width:118px!important}
+.right{bottom:-104px;width:148px!important}
+@media(min-width:768px){.root{padding-bottom:100px}}
+
+/* sem fundo próprio nem recorte: o bloco final é desenhado pelo contêiner */
+.root{overflow:visible;background:transparent}
+
+/* bloco único: respiro curto até o rodapé e moedas ao lado da linha "Realização" */
+.root{padding-bottom:28px}
+.left{width:100px!important;bottom:-90px}
+.right{width:104px!important;bottom:-92px}
+@media(min-width:768px){.root{padding-bottom:56px}}
+
+/* ajuste fino para ficar igual ao mockup do final */
+.root{padding-bottom:18px}
+.root a{min-height:48px;padding:8px 20px;font-size:15px}
+.root .left,.root .right{opacity:.4}
+@media(min-width:768px){.root{padding-bottom:40px}}
+
+/* moedas do final mais para dentro da tela, parte maior visível */
+.root .left{left:-40px;width:112px!important;opacity:.55}
+.root .right{right:-44px;width:116px!important;opacity:.55}
+
+/* imersão: refinamentos */
+.root .left{filter:blur(1.6px)}
+.root .right{filter:drop-shadow(0 10px 12px #0008)}
