@@ -67,3 +67,10 @@
 .button[data-confirmed]{background-color:#12a26b;color:#fff;opacity:1;gap:8px;animation:none}
 .button[data-confirmed]::after{display:none}
 .button[data-confirmed] svg{animation:pop .4s cubic-bezier(.2,1.6,.4,1)}
+
+/* celular: campos com 16 px para o navegador não dar zoom ao digitar */
+@media(max-width:767px){
+  .input input{font-size:16px;min-height:56px;padding-top:18px}
+  .float{font-size:15px}
+  .input input:focus+.float,.input input:not(:placeholder-shown)+.float,.input input:-webkit-autofill+.float{top:7px;font-size:11px}
+}

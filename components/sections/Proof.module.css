@@ -77,3 +77,6 @@
 .messages img{-webkit-user-drag:none;user-select:none}
 .dots button::before,.dots button[aria-current="true"]::before{transition:none;width:calc(8px + 14px*var(--a,0));background:color-mix(in srgb,#18b974 calc(var(--a,0)*100%),#c3ccc8)}
 @media(max-width:699px){.messages{cursor:grab}}
+
+/* celular: o carrossel só se move para o lado; a rolagem vertical não é capturada por ele */
+@media(max-width:699px){.messages{overflow-y:hidden;overscroll-behavior:contain;touch-action:pan-x pinch-zoom}}
