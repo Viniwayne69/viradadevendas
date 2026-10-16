@@ -20,3 +20,12 @@
 
 /* 4 itens: duas colunas no computador, sem item sozinho na última linha */
 @media(min-width:1024px){.root ol{grid-template-columns:repeat(2,1fr)}}
+
+/* seção branca; "Para quem é" logo abaixo é a que fica em verde suave */
+.root{background:#fff;color:var(--ink);padding-top:var(--sec)}
+.root :global(.accent){color:#0b8a47}
+.root li{border:1px solid #dfe9e2;background:#f3f7f4;box-shadow:var(--shadow-1);color:var(--ink)}
+.root li span{color:#06301a}
+@media(hover:hover){.root li:hover{border-color:#18b974;box-shadow:0 12px 28px #0018121f}}
+:global([data-armed]) .root li:not(:global(.r-in)) span{background:#cfe9d8;color:#7aa68a}
+@media(max-width:767px){.root{padding-top:var(--sec)}}

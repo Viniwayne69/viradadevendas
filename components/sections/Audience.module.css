@@ -11,3 +11,7 @@
 
 /* imersão: refinamentos */
 @media(max-width:767px){.grid li{font-size:15px}}
+
+/* verde escuro, como a seção da dor */
+.root{background:linear-gradient(110deg,#00271d,var(--dark-deep));color:#fff}
+.grid article{border:1px solid transparent;background:linear-gradient(#062c23,#062c23) padding-box,linear-gradient(135deg,#60faa64d,#1a5443 38%,#194c3c) border-box;box-shadow:var(--hi);color:#fff}
