@@ -31,7 +31,7 @@ export const content = {
   last: 'Último', warning: 'aviso', lastText: 'Se você continuar chegando na Black Friday sem estratégia, vai continuar tendo os mesmos resultados.', finalCta: 'Garanta sua vaga agora antes que acabe',
   production: 'Realização', logo: 'SEBRAE', copyright: '© 2026 Sebrae. Todos os direitos reservados.',
   coverPlaceholder: 'Foto de capa da Allê', profilePlaceholder: 'Foto da Allê',
-  play: 'Reproduzir vídeo', videoTime: '0:00 / 2:18', videoMissing: 'O vídeo será disponibilizado em breve',
+  play: 'Reproduzir vídeo', videoTime: '0:00 / 2:13', videoMissing: 'O vídeo será disponibilizado em breve',
   videoLabel: 'Apresentação do encontro', volume: 'Ativar ou desativar som', fullscreen: 'Abrir vídeo em tela cheia',
   errors: { name: 'Informe seu nome completo', email: 'Informe um e-mail válido', phone: 'Informe um WhatsApp brasileiro válido com DDD', consent: 'Autorize o recebimento das comunicações para continuar', checkout: 'As inscrições serão disponibilizadas em breve, volte aqui para garantir sua vaga', request: 'Não foi possível enviar seus dados, tente novamente', sending: 'Enviando sua inscrição' }
 } as const;
