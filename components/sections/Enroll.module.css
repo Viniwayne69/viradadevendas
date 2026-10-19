@@ -9,3 +9,8 @@
 
 /* imersão: refinamentos */
 .root .coin{filter:blur(1.2px)}
+
+/* sem formulário: preço e um único botão, centralizados */
+.cta{max-width:420px;margin:20px auto 0}
+.cta a{min-height:56px;font-size:17px}
+@media(min-width:768px){.grid{display:block;max-width:560px;margin-inline:auto}.cta a{min-height:60px;font-size:19px}}

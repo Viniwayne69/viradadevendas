@@ -38,7 +38,6 @@ Somente Countdown, VideoPlayer, Accordion, LeadForm, StickyBar e Reveal declaram
 * `public/images/sebrae-logo.png`, logo oficial
 * URL MP4, YouTube ou Vimeo em `NEXT_PUBLIC_VIDEO_URL`
 * Link de pagamento em `NEXT_PUBLIC_CHECKOUT_URL`
-* Endpoint opcional em `LEAD_WEBHOOK_URL`, acessado apenas pelo servidor
 
 As fotos ausentes usam retângulos neutros e o logo ausente usa texto, após adicionar os arquivos refaça o build para que os componentes de servidor detectem os assets
 
@@ -46,9 +45,7 @@ As fotos ausentes usam retângulos neutros e o logo ausente usa texto, após adi
 
 A contagem usa `2026-11-04T09:00:00-03:00`, renderiza os números após montar e nunca apresenta valores negativos
 
-O formulário valida no navegador e novamente em `/api/lead`, quando o webhook está definido a API aguarda seu sucesso antes de liberar a continuação, falhas impedem o redirecionamento
 
-Sem webhook, a API valida mas não armazena dados, sem checkout o visitante recebe o aviso de indisponibilidade e não é redirecionado
 
 O vídeo só carrega ao clicar e inicia sem som, com controles nativos depois da reprodução, YouTube e Vimeo usam seus próprios controles
 
