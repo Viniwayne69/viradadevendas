@@ -1,6 +1,9 @@
 import Image from 'next/image';
+import type { CSSProperties } from 'react';
 import s from './Ui.module.css';
 
+// Os quatro "variants" mantêm as posições e os movimentos que a página já tinha;
+// agora cada um é o catavento da marca da Allê, com uma inclinação própria.
 type Variant = 'front' | 'tilted' | 'side' | 'profile';
 const motion: Record<Variant, [string, string]> = {
   front: ['7s', '-1s'],
@@ -8,7 +11,9 @@ const motion: Record<Variant, [string, string]> = {
   side: ['8s', '-2s'],
   profile: ['10s', '-6s'],
 };
+const tilt: Record<Variant, string> = { front: '0deg', tilted: '18deg', side: '-14deg', profile: '32deg' };
 
 export default function Coin({ variant, className = '' }: { variant: Variant; className?: string }) {
-  return <Image src={`/coins/${variant}@2x.png`} width={320} height={320} alt="" aria-hidden="true" data-coin className={`${s.coin} ${className}`} style={{ animationDuration: motion[variant][0], animationDelay: motion[variant][1] }}/>;
+  const style = { animationDuration: motion[variant][0], animationDelay: motion[variant][1], '--rot': tilt[variant] } as CSSProperties;
+  return <Image src="/brand/catavento-mostarda.svg" width={320} height={320} unoptimized alt="" aria-hidden="true" data-coin className={`${s.coin} ${className}`} style={style}/>;
 }

@@ -1,6 +1,6 @@
 .root{background:var(--light);color:var(--ink);padding:20px 0 13px}.grid{display:grid;gap:10px}.grid article{background:var(--card);border-radius:14px;padding:17px}.grid h2{font-size:26px}.grid ul{list-style:none;padding:0;margin:17px 0 3px;display:grid;gap:19px}.grid li{display:flex;gap:13px;align-items:flex-start;font-size:13px;line-height:1.5}.grid svg{width:25px;height:25px}@media(min-width:768px){.root{padding:50px 0}.grid{grid-template-columns:1fr 1fr;gap:24px}}
 /* motion + design polish */
-@media(hover:hover){.grid article:hover{translate:0 -3px;box-shadow:0 14px 30px #0018121a}}
+@media(hover:hover){.grid article:hover{translate:0 -3px;box-shadow:0 14px 30px #00151c1a}}
 @media(min-width:768px){.grid article{padding:36px;border-radius:20px}.grid h2{font-size:34px}.grid li{font-size:17px}.grid svg{width:28px;height:28px}.grid ul{gap:22px}}
 
 /* imersão: refinamentos */
@@ -13,5 +13,5 @@
 @media(max-width:767px){.grid li{font-size:15px}}
 
 /* verde escuro, como a seção da dor */
-.root{background:linear-gradient(110deg,#00271d,var(--dark-deep));color:#fff}
-.grid article{border:1px solid transparent;background:linear-gradient(#062c23,#062c23) padding-box,linear-gradient(135deg,#60faa64d,#1a5443 38%,#194c3c) border-box;box-shadow:var(--hi);color:#fff}
+.root{background:linear-gradient(110deg,#001d27,var(--dark-deep));color:#fff}
+.grid article{border:1px solid transparent;background:linear-gradient(#06232c,#06232c) padding-box,linear-gradient(135deg,#df92264d,#1a4654 38%,#193f4c) border-box;box-shadow:var(--hi);color:#fff}

@@ -1,4 +1,4 @@
-.root{padding:24px 0 28px;position:relative;background:radial-gradient(ellipse at 20% 20%,#003629,var(--dark-deep));scroll-margin-top:15px}.grid{position:relative;z-index:1}.offer{text-align:center;margin-bottom:10px}.offer h2{font-size:25px;margin-bottom:9px}.coin{right:-65px;bottom:0;width:150px!important}@media(min-width:768px){.root{padding:60px 0}.grid{display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:50px}.offer h2{font-size:37px}.offer :global(.price){font-size:56px}}
+.root{padding:24px 0 28px;position:relative;background:radial-gradient(ellipse at 20% 20%,#002936,var(--dark-deep));scroll-margin-top:15px}.grid{position:relative;z-index:1}.offer{text-align:center;margin-bottom:10px}.offer h2{font-size:25px;margin-bottom:9px}.coin{right:-65px;bottom:0;width:150px!important}@media(min-width:768px){.root{padding:60px 0}.grid{display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:50px}.offer h2{font-size:37px}.offer :global(.price){font-size:56px}}
 .root{overflow:hidden}
 
 /* motion + design polish */

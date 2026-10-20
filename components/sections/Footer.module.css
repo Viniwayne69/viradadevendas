@@ -1,4 +1,4 @@
-.root{padding:10px 0 20px;text-align:center;background:var(--dark-deep);position:relative}.logo{display:flex;align-items:center;justify-content:center;gap:17px;font-size:12px}.root p{font-size:10px;color:#a6b5b0;margin-top:24px}
+.root{padding:10px 0 20px;text-align:center;background:var(--dark-deep);position:relative}.logo{display:flex;align-items:center;justify-content:center;gap:17px;font-size:12px}.root p{font-size:10px;color:#9cb6bf;margin-top:24px}
 .root{background:var(--dark-deep);margin-top:-1px}
 
 .root{background:transparent;margin-top:0}
@@ -8,3 +8,8 @@
 
 /* imersão: refinamentos */
 @media(max-width:767px){.root p{font-size:11px}}
+
+/* assinatura da Allê: o nome com o catavento no canto, como na marca */
+.alle{display:flex;align-items:flex-start;justify-content:center;gap:5px;margin:6px 0 18px}
+.alle img:first-child{height:54px;width:auto}
+.alle img:last-child{height:36px;width:auto;margin-top:1px}
