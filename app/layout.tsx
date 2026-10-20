@@ -28,6 +28,22 @@ export const metadata: Metadata = {
 
 export const viewport: Viewport = { themeColor: '#002D3C' };
 
+/* Google tag (gtag.js): GA4 (G-JED78TF6D2) e tag-base do Google Ads (AW-18525421106), pedido da equipe de tráfego */
+const googleTag = `window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-JED78TF6D2');
+gtag('config', 'AW-18525421106');`;
+
 export default function Layout({ children }: Readonly<{ children: React.ReactNode }>) {
-  return <html lang="pt-BR"><body className={`${heading.variable} ${body.variable} ${num.variable}`}>{children}</body></html>;
+  return (
+    <html lang="pt-BR">
+      <head>
+        {/* eslint-disable-next-line @next/next/next-script-for-ga */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-JED78TF6D2" />
+        <script dangerouslySetInnerHTML={{ __html: googleTag }} />
+      </head>
+      <body className={`${heading.variable} ${body.variable} ${num.variable}`}>{children}</body>
+    </html>
+  );
 }
