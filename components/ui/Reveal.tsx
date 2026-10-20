@@ -37,10 +37,15 @@ export default function Reveal({ children }: { children: ReactNode }) {
 
     /* rolagem: parallax e giro das moedas, brilho das seções escuras */
     const dark = Array.from(root.querySelectorAll<HTMLElement>('[data-dark]'));
+    const bar = root.querySelector<HTMLElement>('[data-progress]');
     let frame = 0;
     const update = () => {
       frame = 0;
       const vh = window.innerHeight;
+      if (bar) {
+        const max = document.documentElement.scrollHeight - vh;
+        bar.style.transform = `scaleX(${max > 0 ? Math.min(1, Math.max(0, window.scrollY / max)).toFixed(4) : 0})`;
+      }
       coins.forEach((coin) => {
         const rect = coin.getBoundingClientRect();
         if (rect.bottom < -120 || rect.top > vh + 120) return;
@@ -60,7 +65,36 @@ export default function Reveal({ children }: { children: ReactNode }) {
     window.addEventListener('scroll', onScroll, { passive: true });
     window.addEventListener('resize', onScroll);
 
+    /* botões "magnéticos": no computador, o botão acompanha de leve o ponteiro */
+    let magnet: HTMLElement | null = null;
+    const release = () => {
+      if (!magnet) return;
+      magnet.style.removeProperty('--mx');
+      magnet.style.removeProperty('--my');
+      magnet = null;
+    };
+    const onMove = (e: PointerEvent) => {
+      const el = (e.target as Element | null)?.closest<HTMLElement>('[data-magnet]') ?? null;
+      if (el !== magnet) release();
+      if (!el) return;
+      magnet = el;
+      const rect = el.getBoundingClientRect();
+      const dx = Math.max(-1, Math.min(1, (e.clientX - rect.left - rect.width / 2) / (rect.width / 2)));
+      const dy = Math.max(-1, Math.min(1, (e.clientY - rect.top - rect.height / 2) / (rect.height / 2)));
+      el.style.setProperty('--mx', `${(dx * 7).toFixed(1)}px`);
+      el.style.setProperty('--my', `${(dy * 4).toFixed(1)}px`);
+    };
+    const fine = matchMedia('(hover: hover) and (pointer: fine)').matches;
+    if (fine) {
+      root.addEventListener('pointermove', onMove);
+      root.addEventListener('pointerleave', release);
+    }
+
     return () => {
+      if (fine) {
+        root.removeEventListener('pointermove', onMove);
+        root.removeEventListener('pointerleave', release);
+      }
       reveal.disconnect();
       coinWatch.disconnect();
       window.removeEventListener('scroll', onScroll);
@@ -70,5 +104,5 @@ export default function Reveal({ children }: { children: ReactNode }) {
     };
   }, []);
 
-  return <div ref={ref}>{children}</div>;
+  return <div ref={ref}><div className="scroll-progress" data-progress aria-hidden="true"/>{children}</div>;
 }

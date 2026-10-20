@@ -86,6 +86,17 @@
 @media(min-width:1024px){
   .root h2{font-size:52px}
   .lead{font-size:20px}
-  .messages{max-width:none;margin-inline:0;columns:3;column-gap:28px;margin-top:8px}
+  .carousel{margin-top:28px}
+  .messages{display:block;columns:3;column-gap:24px;max-width:none;margin:0;overflow:visible}
+  .message{display:flex;justify-content:center;height:auto;min-height:0;margin:0 0 24px;padding:12px;break-inside:avoid;background:#00212c;border-radius:20px}
+  .zoom{display:block;width:auto;height:auto}
+  .message img{width:auto;max-width:100%;height:auto;max-height:520px;object-fit:contain;border-radius:12px}
+  .messages:not([data-drag])>.message{transition:transform .45s cubic-bezier(.2,.9,.25,1),translate .25s ease,box-shadow .25s ease}
+  .message:hover{translate:0 -6px;box-shadow:0 20px 40px #00151c47,0 0 0 1px #df922680}
+  .hintTouch{display:none}
+  .hint{display:block;margin-top:26px;font-size:15px}
 }
+@media(min-width:1280px){.messages{columns:4}}
 
+.hintMouse{display:none}
+@media(min-width:1024px){.hintMouse{display:inline}}

@@ -14,6 +14,6 @@ const motion: Record<Variant, [string, string]> = {
 const tilt: Record<Variant, string> = { front: '0deg', tilted: '18deg', side: '-14deg', profile: '32deg' };
 
 export default function Coin({ variant, className = '' }: { variant: Variant; className?: string }) {
-  const style = { animationDuration: motion[variant][0], animationDelay: motion[variant][1], '--rot': tilt[variant] } as CSSProperties;
+  const style = { '--dur': motion[variant][0], '--dl': motion[variant][1], '--rot': tilt[variant] } as CSSProperties;
   return <Image src="/brand/catavento-mostarda.svg" width={320} height={320} unoptimized alt="" aria-hidden="true" data-coin className={`${s.coin} ${className}`} style={style}/>;
 }

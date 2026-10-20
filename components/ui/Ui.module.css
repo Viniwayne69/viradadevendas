@@ -78,3 +78,12 @@
 
 /* ===== COMPUTADOR (1024px ou mais): só aqui; celular e tablet ficam como estão ===== */
 @media(min-width:1024px){.accordion{max-width:920px;gap:12px}.accordion button{padding:22px 22px;min-height:64px}.accordion h3{font-size:19px}.accordion p{font-size:17px;padding:0 32px 26px 58px}}
+
+
+/* movimento extra: catavento gira devagar e botão acompanha o ponteiro */
+@property --spin{syntax:'<angle>';inherits:false;initial-value:0deg}
+@keyframes coinSpin{to{--spin:360deg}}
+@media(prefers-reduced-motion:no-preference){
+  .coin{rotate:calc(var(--rot,0deg) + var(--spin));animation:coinFloat var(--dur,8s) ease-in-out var(--dl,0s) infinite alternate,coinSpin 64s linear infinite}
+  .button{translate:var(--mx,0px) var(--my,0px);transition:background .2s,transform .25s,box-shadow .3s,translate .18s ease-out}
+}

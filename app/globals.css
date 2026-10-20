@@ -30,3 +30,12 @@ p,li{text-wrap:pretty}
 /* ===== COMPUTADOR (1024px ou mais): só aqui; celular e tablet ficam como estão ===== */
 @media(min-width:1024px){:root{--max:1240px;--sec:104px}}
 @media(min-width:1440px){:root{--max:1300px}}
+
+
+/* barra de progresso da rolagem */
+.scroll-progress{position:fixed;top:0;left:0;right:0;height:3px;z-index:60;pointer-events:none;transform-origin:0 50%;transform:scaleX(0);background:linear-gradient(90deg,#df9226,#f2b04a);box-shadow:0 0 10px #df922699}
+
+/* computador: o padrão do fundo escuro anda mais devagar que a rolagem */
+@media(min-width:1024px) and (hover:hover) and (prefers-reduced-motion:no-preference){
+  [data-dark]::after{background-position:0 calc(var(--p,0)*-120px)}
+}

@@ -165,7 +165,7 @@ export default function ProofMessages({ messages }: { messages: Message[] }) {
           <button key={m.src} ref={(el) => { dots.current[i] = el; }} type="button" aria-label={`Ir para a mensagem ${i + 1}`} aria-current={i === active} style={{ '--a': i === 0 ? 1 : 0 } as CSSProperties} onClick={() => goTo(i)}/>
         ))}
       </div>
-      <p className={s.hint}>Deslize para ver mais e toque para ampliar</p>
+      <p className={s.hint}><span className={s.hintTouch}>Deslize para ver mais e toque para ampliar</span><span className={s.hintMouse}>Clique em uma mensagem para ampliar</span></p>
 
       {current && createPortal(
         <div className={s.lightbox} role="dialog" aria-modal="true" aria-label="Mensagem ampliada" onClick={() => setOpen(null)}>
