@@ -80,3 +80,12 @@
 
 /* celular: o carrossel não rola na vertical por dentro (não "solta"); arrastes verticais continuam rolando a página */
 @media(max-width:699px){.messages{overflow-y:hidden;overscroll-behavior-x:contain}}
+
+
+/* ===== COMPUTADOR (1024px ou mais): só aqui; celular e tablet ficam como estão ===== */
+@media(min-width:1024px){
+  .root h2{font-size:52px}
+  .lead{font-size:20px}
+  .messages{max-width:none;margin-inline:0;columns:3;column-gap:28px;margin-top:8px}
+}
+

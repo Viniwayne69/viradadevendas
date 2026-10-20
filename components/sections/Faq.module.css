@@ -1,3 +1,7 @@
 .root{padding:27px 0 20px;background:var(--light);color:var(--ink)}.root h2{text-align:center;margin-bottom:17px;font-size:29px}@media(min-width:768px){.root{padding:55px 0}.root h2{font-size:36px}}
 /* imersão: refinamentos */
 .root{padding-block:var(--sec)}
+
+
+/* ===== COMPUTADOR (1024px ou mais): só aqui; celular e tablet ficam como estão ===== */
+@media(min-width:1024px){.root h2{font-size:48px;margin-bottom:36px}}

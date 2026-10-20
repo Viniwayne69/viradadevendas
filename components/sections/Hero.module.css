@@ -27,3 +27,23 @@
 
 /* fim do hero mais curto, moeda um pouco mais baixa para não tocar no texto */
 @media(max-width:767px){.root{padding-bottom:92px}.root .coinThree{bottom:-108px}}
+
+
+/* ===== COMPUTADOR (1024px ou mais): só aqui; celular e tablet ficam como estão ===== */
+@media(min-width:1024px){
+  .root{padding:80px 0 124px}
+  .grid{grid-template-columns:1fr 1.05fr;gap:72px}
+  .intro{text-align:left;margin:0}
+  .intro h1 span{font-size:76px;letter-spacing:-3px}
+  .intro h1 strong{font-size:clamp(120px,10.5vw,168px);letter-spacing:-6px}
+  .intro p{font-size:26px;line-height:1.3;max-width:520px;margin:22px 0 0}
+  .details{margin-top:36px;gap:96px}
+  .details>div{max-width:none;gap:12px}
+  .details svg{width:34px;height:34px}
+  .details span{font-size:24px}
+  .coinOne{left:-46px;top:150px;width:120px!important}
+  .coinTwo{right:36px;top:60px;width:110px!important}
+  .coinThree{right:64px;bottom:-72px;width:160px!important}
+}
+
+@media(min-width:1024px) and (max-width:1279px){.root .coinOne{display:none}}

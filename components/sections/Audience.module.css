@@ -15,3 +15,7 @@
 /* verde escuro, como a seção da dor */
 .root{background:linear-gradient(110deg,#001d27,var(--dark-deep));color:#fff}
 .grid article{border:1px solid transparent;background:linear-gradient(#06232c,#06232c) padding-box,linear-gradient(135deg,#df92264d,#1a4654 38%,#193f4c) border-box;box-shadow:var(--hi);color:#fff}
+
+
+/* ===== COMPUTADOR (1024px ou mais): só aqui; celular e tablet ficam como estão ===== */
+@media(min-width:1024px){.grid{gap:32px}.grid article{padding:48px 44px}.grid h2{font-size:42px}.grid li{font-size:19px}.grid svg{width:32px;height:32px}.grid ul{gap:26px;margin-top:28px}}

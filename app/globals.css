@@ -25,3 +25,8 @@ p,li{text-wrap:pretty}
 [data-dark]::before{background:linear-gradient(90deg,transparent,#df922688 50%,transparent) top/100% 1px no-repeat,radial-gradient(60% 55% at 50% calc(-12% + var(--p,0)*55%),#df92262b,transparent 72%)}
 [data-dark]+section:not([data-dark]){position:relative;isolation:isolate}
 [data-dark]+section:not([data-dark])::before{content:"";position:absolute;inset:0 0 auto;height:44px;background:linear-gradient(#00151c40,transparent);pointer-events:none;z-index:-1}
+
+
+/* ===== COMPUTADOR (1024px ou mais): só aqui; celular e tablet ficam como estão ===== */
+@media(min-width:1024px){:root{--max:1240px;--sec:104px}}
+@media(min-width:1440px){:root{--max:1300px}}

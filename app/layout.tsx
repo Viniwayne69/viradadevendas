@@ -39,9 +39,14 @@ export default function Layout({ children }: Readonly<{ children: React.ReactNod
   return (
     <html lang="pt-BR">
       <head>
-        {/* eslint-disable-next-line @next/next/next-script-for-ga */}
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-JED78TF6D2" />
-        <script dangerouslySetInnerHTML={{ __html: googleTag }} />
+        {/* só na versão publicada: testes locais não geram visitas no Analytics */}
+        {process.env.NODE_ENV === 'production' && (
+          <>
+            {/* eslint-disable-next-line @next/next/next-script-for-ga */}
+            <script async src="https://www.googletagmanager.com/gtag/js?id=G-JED78TF6D2" />
+            <script dangerouslySetInnerHTML={{ __html: googleTag }} />
+          </>
+        )}
       </head>
       <body className={`${heading.variable} ${body.variable} ${num.variable}`}>{children}</body>
     </html>

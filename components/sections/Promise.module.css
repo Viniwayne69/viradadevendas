@@ -11,3 +11,7 @@
 
 /* imersão: refinamentos */
 @media(max-width:767px){.root p{font-size:15.5px}}
+
+
+/* ===== COMPUTADOR (1024px ou mais): só aqui; celular e tablet ficam como estão ===== */
+@media(min-width:1024px){.root h2{font-size:clamp(60px,5vw,76px);max-width:1000px}.root p{font-size:24px;max-width:820px;margin-top:28px}}

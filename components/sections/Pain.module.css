@@ -8,3 +8,14 @@
 
 /* imersão: refinamentos */
 @media(max-width:767px){.root li{font-size:15.5px}}
+
+
+/* ===== COMPUTADOR (1024px ou mais): só aqui; celular e tablet ficam como estão ===== */
+@media(min-width:1024px){
+  .root h2{text-align:center;margin:0 auto;font-size:52px}
+  .root ul{grid-template-columns:repeat(3,1fr);gap:28px;margin:48px 0 44px}
+  .root li{font-size:20px;padding:26px 28px;gap:18px}
+  .root li svg{width:38px;height:38px}
+  .root h3{font-size:40px;max-width:760px;margin:0 auto 28px}
+  .root a{max-width:460px}
+}

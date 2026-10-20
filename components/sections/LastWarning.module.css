@@ -30,3 +30,14 @@
 /* imersão: refinamentos */
 .root .left{filter:blur(1.6px)}
 .root .right{filter:drop-shadow(0 10px 12px #0008)}
+
+
+/* ===== COMPUTADOR (1024px ou mais): só aqui; celular e tablet ficam como estão ===== */
+@media(min-width:1024px){
+  .root h2{font-size:58px}
+  .root h2 svg{width:56px;height:56px}
+  .root p{font-size:24px;max-width:660px}
+  .root a{min-height:60px;font-size:19px;padding:12px 36px;max-width:460px}
+  .root .left{left:6%;bottom:-70px;width:140px!important}
+  .root .right{right:6%;bottom:-80px;width:150px!important}
+}

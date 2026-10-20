@@ -13,3 +13,13 @@
 
 /* imersão: refinamentos */
 .grid img{background:#f1e9da}
+
+
+/* ===== COMPUTADOR (1024px ou mais): só aqui; celular e tablet ficam como estão ===== */
+@media(min-width:1024px){
+  .root h2{margin:0 0 48px;font-size:52px}
+  .grid{max-width:none;margin:0;grid-template-columns:400px 1fr;gap:80px;align-items:center}
+  .grid h3{font-size:60px;margin-top:0}
+  .role{font-size:26px;margin:8px 0 26px}
+  .bio{font-size:21px;max-width:640px;line-height:1.55}
+}

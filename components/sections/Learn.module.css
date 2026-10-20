@@ -29,3 +29,12 @@
 @media(hover:hover){.root li:hover{border-color:#cc5b19;box-shadow:0 12px 28px #00151c1f}}
 :global([data-armed]) .root li:not(:global(.r-in)) span{background:#fbe7c4;color:#6fa1b1}
 @media(max-width:767px){.root{padding-top:var(--sec)}}
+
+
+/* ===== COMPUTADOR (1024px ou mais): só aqui; celular e tablet ficam como estão ===== */
+@media(min-width:1024px){
+  .root h2{text-align:center;font-size:52px;margin:0 auto}
+  .root ol{grid-template-columns:repeat(4,1fr);gap:24px;margin-top:48px}
+  .root li{flex-direction:column;align-items:flex-start;justify-content:flex-start;gap:20px;min-height:170px;padding:28px 26px;font-size:21px;line-height:1.25}
+  .root li span{font-size:36px;padding:6px 16px}
+}
