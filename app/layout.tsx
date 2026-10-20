@@ -35,6 +35,12 @@ gtag('js', new Date());
 gtag('config', 'G-JED78TF6D2');
 gtag('config', 'AW-18525421106');`;
 
+/* Pixel da Meta (Allê): código-base padrão, registra a visita à página (PageView) */
+const pixelId = '1639666154461538';
+const metaPixel = `!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '${pixelId}');
+fbq('track', 'PageView');`;
+
 export default function Layout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="pt-BR">
@@ -45,6 +51,11 @@ export default function Layout({ children }: Readonly<{ children: React.ReactNod
             {/* eslint-disable-next-line @next/next/next-script-for-ga */}
             <script async src="https://www.googletagmanager.com/gtag/js?id=G-JED78TF6D2" />
             <script dangerouslySetInnerHTML={{ __html: googleTag }} />
+            <script dangerouslySetInnerHTML={{ __html: metaPixel }} />
+            <noscript>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img height="1" width="1" style={{ display: 'none' }} alt="" src={`https://www.facebook.com/tr?id=${pixelId}&ev=PageView&noscript=1`} />
+            </noscript>
           </>
         )}
       </head>
