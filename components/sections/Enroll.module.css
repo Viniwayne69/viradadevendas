@@ -8,7 +8,7 @@
 .root{padding-block:var(--sec)}
 
 /* imersão: refinamentos */
-.root .coin{filter:blur(1.2px)}
+
 
 /* sem formulário: preço e um único botão, centralizados */
 .cta{max-width:420px;margin:20px auto 0}

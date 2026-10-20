@@ -16,9 +16,9 @@
 @media(min-width:768px){.root{padding:70px 0 90px}.coinThree{bottom:-90px}}
 
 /* imersão: refinamentos */
-.root .coinOne{filter:blur(2.4px)}
+
 .root .coinTwo{filter:drop-shadow(0 12px 14px #0008)}
-.root .coinThree{filter:blur(1px)}
+
 
 /* imersão: refinamentos */
 .details span{font-family:var(--font-num),sans-serif;font-weight:700;font-size:15px;letter-spacing:.3px;text-transform:uppercase;line-height:1.1}

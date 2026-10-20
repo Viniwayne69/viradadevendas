@@ -28,7 +28,7 @@
 .root .right{right:-44px;width:116px!important;opacity:.55}
 
 /* imersão: refinamentos */
-.root .left{filter:blur(1.6px)}
+
 .root .right{filter:drop-shadow(0 10px 12px #0008)}
 
 
