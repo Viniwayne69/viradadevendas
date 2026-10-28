@@ -2,7 +2,7 @@ export const content = {
   title: 'Virada de Vendas', subtitle: 'Direcionamento estratégico para a Black Friday e o Natal',
   open: 'Inscrições abertas', timeLabels: ['DIAS', 'HORAS', 'MIN', 'SEG'],
   brand: ['Virada de', 'Vendas'], event: ['04 de novembro', '9h às 12h', 'Mar Hotel Boa Viagem'],
-  promise: 'Dada de diquinhas, você vai sair com', strategy: 'estratégia',
+  promise: 'Chega de diquinhas, você vai sair com', strategy: 'estratégia',
   support: 'Um encontro prático para você vender mais na Black Friday e no Natal',
   painTitle: 'Se você está chegando na Black Friday assim...',
   pains: ['Sem um plano definido', 'Sem saber o que realmente funciona', 'Com a equipe desalinhada'],
