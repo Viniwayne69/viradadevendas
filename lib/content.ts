@@ -10,7 +10,7 @@ export const content = {
   learnTitle: 'O que você vai aprender', practice: 'na prática',
   lessons: ['Planejamento estratégico', 'Inovações e tendências do momento', 'Prospecção assertiva e vendas corporativas', 'Equipe de alta performance'],
   outcomeTitle: 'Você vai sair do encontro com', outcomes: ['Um plano de ação realista', 'Ferramentas aplicáveis no seu negócio', 'Mais clareza para vender mais'],
-  forTitle: 'Para quem é', for: ['Empresários e donos de negócio', 'Gestores e líderes de equipe', 'Quem quer vender mais na Black Friday e no Natal'],
+  forTitle: 'Para quem é', for: ['Empresários e donos de negócio', 'Gestores e líderes de equipe', 'Profissionais autônomos e liberais', 'Quem quer vender mais na Black Friday e no Natal'],
   notTitle: 'Para quem não é', not: ['Quem busca apenas teoria', 'Quem não tem interesse em colocar a mão na prática'],
   methodTitle: 'Por que esse encontro', works: 'funciona',
   pillars: [['Direto ao ponto', 'Sem enrolação, só o que funciona'], ['Prático', 'Conteúdo aplicável no seu negócio'], ['Presencial', 'Networking e troca de experiências reais']],

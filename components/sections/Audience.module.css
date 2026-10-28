@@ -19,3 +19,7 @@
 
 /* ===== COMPUTADOR (1024px ou mais): só aqui; celular e tablet ficam como estão ===== */
 @media(min-width:1024px){.grid{gap:32px}.grid article{padding:48px 44px}.grid h2{font-size:42px}.grid li{font-size:19px}.grid svg{width:32px;height:32px}.grid ul{gap:26px;margin-top:28px}}
+
+
+/* só o bloco "Para quem é": um cartão centralizado */
+@media(min-width:768px){.grid{grid-template-columns:1fr;max-width:760px;margin-inline:auto}}
