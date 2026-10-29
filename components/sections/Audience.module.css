@@ -71,3 +71,8 @@
   .tLabel{color:var(--laranja)}
   .tInfo svg{color:var(--laranja)}
 }
+
+/* paleta da marca: faixa bordô no topo do ingresso */
+@media(min-width:1024px){
+  .ticket{box-shadow:0 30px 60px #00151c80,0 0 0 1px #ffffff40,inset 0 8px 0 var(--bordo)}
+}

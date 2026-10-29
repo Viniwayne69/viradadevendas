@@ -17,3 +17,7 @@
 }
 /* paleta da marca: ícone do contador em laranja */
 .row>svg,.timer>svg{color:var(--laranja-claro)}
+
+/* paleta da marca: "Inscrições abertas" em selo bordô */
+.timer>strong{background:var(--bordo);color:#fff8ee;padding:3px 9px;border-radius:999px;font-size:11px;letter-spacing:.2px}
+@media(min-width:1024px){.timer>strong{padding:6px 14px;font-size:13px}}

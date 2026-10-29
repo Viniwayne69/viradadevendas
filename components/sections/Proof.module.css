@@ -148,3 +148,8 @@
 .qmark{color:var(--laranja)}
 .qline{background:var(--laranja)}
 .qmore{color:var(--bordo)}
+
+/* paleta da marca: bordô nos cards de depoimento */
+.qcard{border-top:4px solid var(--bordo)}
+.qhigh{color:var(--bordo)}
+.qline{background:var(--bordo)}

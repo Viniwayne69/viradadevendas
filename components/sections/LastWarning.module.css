@@ -56,3 +56,5 @@
   .root .left{display:none}
   .root .right{right:2%;top:40px;bottom:auto;width:96px!important}
 }
+/* paleta da marca: megafone em círculo bordô */
+.root h2 svg{background:var(--bordo);color:#fff8ee;border-radius:50%;padding:9px;box-sizing:border-box;transform:rotate(-12deg)}

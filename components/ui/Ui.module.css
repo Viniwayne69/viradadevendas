@@ -123,3 +123,8 @@
 .play{background:var(--laranja)}
 .play::before{border-color:var(--laranja)}
 .accordion button:hover{color:var(--bordo)}
+
+/* paleta da marca: perguntas frequentes com detalhes em bordô */
+.accordion article{border-left:5px solid var(--bordo)}
+.accordion button>svg:first-child{color:var(--bordo)}
+.accordion button[aria-expanded="true"]{color:var(--bordo)}

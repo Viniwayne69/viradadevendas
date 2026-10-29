@@ -94,3 +94,8 @@
 
 /* paleta da marca: preço em laranja */
 .priceLine strong{color:var(--laranja-claro)}
+
+/* paleta da marca: etiqueta do evento em selo bordô */
+@media(min-width:1024px){
+  .eyebrow{display:inline-block;background:var(--bordo);color:#fff8ee;padding:9px 18px;border-radius:999px;letter-spacing:3px;box-shadow:0 0 0 1px #ffffff26}
+}

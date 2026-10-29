@@ -59,3 +59,8 @@
 @media(min-width:1024px){
   .root li .num,:global([data-armed]) .root li:not(:global(.r-in)) .num{background:none;color:var(--laranja-claro)}
 }
+
+/* paleta da marca: bordô nos destaques da seção */
+.root :global(.accent){color:var(--bordo)}
+.root li{border-left:5px solid var(--bordo)}
+@media(hover:hover){.root li:hover{border-color:var(--bordo)}}

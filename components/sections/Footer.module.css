@@ -22,3 +22,5 @@
   .alle img:last-child{height:28px}
   .root p{margin:0;font-size:13px}
 }
+/* paleta da marca: filete bordô no rodapé */
+@media(min-width:1024px){.root .wrap{border-top:3px solid var(--bordo)}}

@@ -40,3 +40,8 @@
   .creds li{display:flex;align-items:center;gap:14px;font-size:18px;font-weight:700;color:#002d3c}
   .creds svg{width:40px;height:40px;color:#df9226;stroke-width:1.6}
 }
+/* paleta da marca: bordô na apresentação */
+@media(min-width:1024px){
+  .eyebrow{color:var(--bordo)}
+  .creds svg{color:var(--bordo)}
+}

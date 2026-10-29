@@ -29,3 +29,16 @@
 
 /* paleta da marca: números em laranja */
 .stats strong{color:var(--laranja-claro)}
+/* celular e tablet: os 3 números do evento em cartões logo abaixo do texto, sem faixa cinza no topo */
+.root.root.root::before{background:none!important}
+@media(max-width:1023px){
+  .stats{list-style:none;margin:26px 0 0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+  .stats li{display:flex;flex-direction:column;gap:6px;padding:14px 10px 13px;background:#fff;border-radius:14px;border-top:4px solid var(--bordo);box-shadow:var(--shadow-1)}
+  .stats strong{font-family:var(--font-num),sans-serif;font-weight:800;font-size:36px;line-height:.95;color:var(--laranja)}
+  .stats span{font-size:12px;line-height:1.3;color:#274651}
+}
+@media(min-width:768px) and (max-width:1023px){
+  .stats{max-width:720px;gap:16px}
+  .stats strong{font-size:48px}
+  .stats span{font-size:14px}
+}
