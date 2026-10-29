@@ -76,3 +76,20 @@
 @media(min-width:1024px){
   .ticket{box-shadow:0 30px 60px #00151c80,0 0 0 1px #ffffff40,inset 0 8px 0 var(--bordo)}
 }
+
+/* celular e tablet: sem caixa, título centralizado e três cartões grandes com ícone, fáceis de ler de relance */
+@media(max-width:1023px){
+  .grid article{background:none;box-shadow:none;padding:0;border-radius:0}
+  .grid article:hover{translate:none;box-shadow:none}
+  .grid h2{text-align:center;font-size:30px}
+  .grid ul{margin:22px 0 0;gap:12px}
+  .grid li{align-items:center;gap:16px;padding:14px 16px;border-radius:16px;background:#0b3442b3;border:1px solid #ffffff1f;font-size:18px;font-weight:700;line-height:1.2}
+  .ico{display:grid;place-items:center;flex:0 0 46px;width:46px;height:46px;border-radius:50%;background:var(--laranja);color:#00151c}
+  .ico svg{width:24px;height:24px}
+}
+
+/* mesmo título e mesmo cartão das outras seções */
+@media(max-width:1023px){
+  .grid h2{text-align:left;font-size:30px}
+  .grid li{font-size:17px}
+}

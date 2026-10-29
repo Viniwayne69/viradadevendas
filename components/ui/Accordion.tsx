@@ -5,7 +5,7 @@ import { content } from '@/lib/content';
 import s from './Ui.module.css';
 
 export default function Accordion() {
-  const [open, setOpen] = useState<number | null>(0);
+  const [open, setOpen] = useState<number | null>(null);
   return (
     <div className={s.accordion}>
       {content.faq.map(([q, a], i) => (

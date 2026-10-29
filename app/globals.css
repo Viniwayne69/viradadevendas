@@ -55,3 +55,6 @@ p,li{text-wrap:pretty}
 :root{--laranja:#e06427;--laranja-claro:#ee7a3c;--bordo:#85161a;--bordo-fundo:#5e0f12}
 .price{color:var(--laranja-claro)}
 .scroll-progress{background:linear-gradient(90deg,#df9226,#e06427);box-shadow:none}
+
+/* celular e tablet: sem a faixa cinza que escurecia o topo das seções claras */
+@media(max-width:1023px){[data-dark]+section:not([data-dark])::before{display:none}}

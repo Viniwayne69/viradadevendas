@@ -11,5 +11,4 @@ import Faq from "@/components/sections/Faq";
 import LastWarning from "@/components/sections/LastWarning";
 import Footer from "@/components/sections/Footer";
 import StickyBar from "@/components/ui/StickyBar";
-import Reveal from "@/components/ui/Reveal";
-export default function Page(){return <><main><Reveal><TopBar/><Hero/><Promise/><Pain/><Learn/><Audience/><Proof/><Author/><Enroll/><Faq/><div className="finale" data-dark><LastWarning/><Footer/></div></Reveal></main><StickyBar/></>}
+import Reveal from "@/components/ui/Reveal";export default function Page(){return <><main><Reveal><TopBar/><Hero/><Promise/><Pain/><Learn/><Audience/><Proof/><Author/><Enroll/><Faq/><div className="finale" data-dark><LastWarning/><Footer/></div></Reveal></main><StickyBar/></>}

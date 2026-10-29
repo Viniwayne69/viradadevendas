@@ -64,3 +64,42 @@
 .root :global(.accent){color:var(--bordo)}
 .root li{border-left:5px solid var(--bordo)}
 @media(hover:hover){.root li:hover{border-color:var(--bordo)}}
+
+/* menos texto no computador: a frase de apoio aparece ao passar o mouse (em telas de toque continua visível) */
+@media(min-width:1024px) and (hover:hover){
+  .root li small{max-height:0;opacity:0;overflow:hidden;transition:max-height .35s ease,opacity .3s ease}
+  .root li:hover small,.root li:focus-within small{max-height:90px;opacity:1}
+}
+
+/* cartões que abrem: tocar mostra a frase de apoio (celular e tablet); no computador passar o mouse também abre */
+.root li{cursor:pointer}
+@media(max-width:1023px){.root li{display:grid;grid-template-columns:auto 1fr auto;align-items:center;column-gap:16px}.root li small{grid-column:1/-1}}
+.root li:focus-visible{outline:3px solid var(--laranja);outline-offset:2px}
+.root li small{display:none;padding:6px 4px 8px 58px;font-size:14px;line-height:1.45;color:#3e5860}
+.root li[data-open] small{display:block}
+.plus{margin-left:auto;width:20px;height:20px;color:var(--bordo);transition:rotate .25s ease}
+.root li[data-open] .plus{rotate:45deg}
+@media(min-width:1024px){
+  .plus{display:none}
+  .root li small{display:block;padding:0;font-size:16px}
+  .root li[data-open] small{max-height:90px;opacity:1}
+}
+
+/* celular: a linha do plano liga os 4 itens e se desenha ao rolar */
+@media(max-width:767px){
+  .root ol{position:relative;gap:18px}
+  .root li{position:relative;z-index:1}
+  .root ol[data-line]::before{content:"";position:absolute;left:35px;top:26px;bottom:26px;width:3px;border-radius:3px;background:linear-gradient(var(--laranja),var(--bordo));transform-origin:top center;transform:scaleY(var(--draw,0));z-index:0}
+}
+
+/* ===== UM SÓ ESTILO (celular e tablet): mesmo título, mesmo cartão, número em círculo laranja ===== */
+@media(max-width:1023px){
+  .root h2{font-size:30px}
+  .root li{gap:16px;padding:14px 16px;border-radius:16px;border:1px solid #f0e7d8;font-size:17px;font-weight:700;line-height:1.2;min-height:0}
+  .root li .num,:global([data-armed]) .root li:not(:global(.r-in)) .num{display:grid;place-items:center;width:46px;height:46px;padding:0;border-radius:50%;font-size:22px}
+  .plus{width:22px;height:22px}
+}
+@media(max-width:767px){
+  .root ol{gap:14px}
+  .root ol[data-line]::before{left:38px;top:34px;bottom:34px}
+}

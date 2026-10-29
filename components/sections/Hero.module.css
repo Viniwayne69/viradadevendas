@@ -99,3 +99,25 @@
 @media(min-width:1024px){
   .eyebrow{display:inline-block;background:var(--bordo);color:#fff8ee;padding:9px 18px;border-radius:999px;letter-spacing:3px;box-shadow:0 0 0 1px #ffffff26}
 }
+/* celular: mesma altura de antes, mas o conteúdo mais centralizado (menos vazio embaixo) */
+@media(max-width:767px){.root{padding:56px 0 66px}.root .coinThree{bottom:-82px}}
+
+/* ===== ABERTURA: os cataventos de fundo cruzam a tela de um lado a outro, girando rápido, e somem ===== */
+@keyframes cataventoAbertura{
+  0%{opacity:0;transform:translateX(0) rotate(0deg);animation-timing-function:linear}
+  12%{opacity:1;transform:translateX(0) rotate(200deg);animation-timing-function:linear}
+  55%{opacity:1;transform:translateX(0) rotate(900deg);animation-timing-function:cubic-bezier(.5,0,1,.7)}
+  99%{opacity:1;transform:translateX(var(--sai)) rotate(1500deg)}
+  100%{opacity:0;visibility:hidden;transform:translateX(var(--sai)) rotate(1500deg)}
+}
+.root .coinOne,.root .coinTwo,.root .coinThree{
+  display:block;pointer-events:none;will-change:transform,opacity;
+  animation:cataventoAbertura 2.2s linear var(--atraso,.2s) both
+}
+/* cada catavento sai pela lateral em que está: o da esquerda para a esquerda, os da direita para a direita */
+.root .coinOne{--sai:-100vw;--atraso:.2s}
+.root .coinTwo{--sai:100vw;--atraso:.3s}
+.root .coinThree{--sai:100vw;--atraso:.4s}
+@media(prefers-reduced-motion:reduce){.root .coinOne,.root .coinTwo,.root .coinThree{display:none}}
+/* a abertura sempre roda até o fim, mesmo que o catavento comece fora da área visível */
+.root .coinOne[data-off],.root .coinTwo[data-off],.root .coinThree[data-off]{animation-play-state:running!important}

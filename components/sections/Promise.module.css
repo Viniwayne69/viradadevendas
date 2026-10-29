@@ -29,3 +29,11 @@
 
 /* paleta da marca: números em laranja */
 .stats strong{color:var(--laranja-claro)}
+
+/* o numero que conta fica dentro do <strong> e herda o tamanho e a cor dele */
+.stats strong span{font:inherit;color:inherit;max-width:none;line-height:inherit}
+
+/* celular e tablet: a frase e uma declaracao, entao fica centralizada e equilibrada entre os dois lados */
+@media(max-width:1023px){
+  .root h2{text-align:center;max-width:none;margin-inline:auto}
+}
