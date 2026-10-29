@@ -18,3 +18,22 @@
 
 /* ===== COMPUTADOR (1024px ou mais): só aqui; celular e tablet ficam como estão ===== */
 @media(min-width:1024px){.offer h2{font-size:54px}.offer :global(.price){font-size:104px}.offer :global(.old){font-size:18px}.grid{max-width:640px}.cta{max-width:480px}.cta a{min-height:68px;font-size:21px}}
+
+/* ===== COMPUTADOR, REDESENHO: card de oferta em duas colunas ===== */
+@media(min-width:1024px){
+  .grid{display:grid;grid-template-columns:1fr 1fr;max-width:1100px;margin-inline:auto;padding:54px 58px;border:1px solid #df9226a6;border-radius:30px;background:linear-gradient(160deg,#0a3341cc,#03202acc);box-shadow:0 40px 90px #0009,inset 0 1px 0 #ffffff14}
+  .offer{text-align:left;margin:0;padding-right:56px;border-right:1px solid #ffffff1f}
+  .badge{display:inline-block;padding:7px 16px;border-radius:999px;background:#831417;color:#fff8ee;font-size:13px;font-weight:800;letter-spacing:.5px;margin-bottom:20px}
+  .offer h2{font-size:38px;margin-bottom:18px}
+  .offer :global(.price){font-size:110px}
+  .event{list-style:none;padding:0;margin:26px 0 0;display:flex;flex-wrap:wrap;gap:12px 24px}
+  .event li{display:flex;align-items:center;gap:8px;font-size:16px;color:#d6e2e6}
+  .event svg{width:20px;height:20px;color:#f2b04a}
+  .cta{max-width:none;margin:0;padding-left:56px;display:flex;flex-direction:column;justify-content:center}
+  .incTitle{font-size:26px;color:#f2b04a;margin-bottom:18px}
+  .inc{list-style:none;padding:0;margin:0 0 30px;display:grid;gap:14px}
+  .inc li{display:flex;align-items:flex-start;gap:12px;font-size:18px;line-height:1.4;color:#f4ede1}
+  .inc svg{width:22px;height:22px;color:#df9226;margin-top:2px}
+  .secure{display:flex;align-items:center;justify-content:center;gap:8px;margin-top:16px;font-size:14px;color:#9fb5bc}
+  .secure svg{width:16px;height:16px}
+}

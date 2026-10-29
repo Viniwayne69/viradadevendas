@@ -33,6 +33,19 @@ export const content = {
   coverPlaceholder: 'Foto de capa da Allê', profilePlaceholder: 'Foto da Allê',
   play: 'Reproduzir vídeo', videoTime: '0:00 / 2:13', videoMissing: 'O vídeo será disponibilizado em breve',
   videoLabel: 'Apresentação do encontro', volume: 'Ativar ou desativar som', fullscreen: 'Abrir vídeo em tela cheia',
+  /* só no computador (1024px ou mais) */
+  desk: {
+    headerCta: 'Garantir minha vaga', eyebrow: 'Evento presencial · Recife', videoCaption: 'Assista: Eu sou Allê Ebrahim · 2 min',
+    place: ['Mar Hotel', 'Boa Viagem · Recife'],
+    promiseStats: [['3h', 'de encontro presencial e prático'], ['16+', 'anos de experiência da Allê em vendas'], ['1', 'plano para aplicar na sua empresa']],
+    painDetails: ['Ideias soltas, sem um caminho claro para vender mais', 'Dúvida sobre onde investir tempo, equipe e dinheiro', 'Cada um fazendo de um jeito, sem foco no resultado'],
+    learnDetails: ['Como organizar as ações para vender mais no fim de ano', 'O que está funcionando agora no varejo e nos serviços', 'Como encontrar, abordar e fechar com mais clientes', 'Como engajar o time para bater as metas da temporada'],
+    ticket: { label: 'Ingresso', day: '04', month: 'Nov', time: '9h às 12h', host: 'Com Allê Ebrahim' },
+    creds: ['16+ anos de experiência', 'Parceria com o SEBRAE'], hostEyebrow: 'Quem conduz',
+    badge: 'Subsídio Sebrae', includedTitle: 'O que está incluso',
+    included: ['Encontro presencial de 3 horas com a Allê', 'Direcionamento estratégico para Black Friday e Natal', 'Conteúdo prático para aplicar no seu negócio'],
+    secure: 'Pagamento seguro pela Bilheteria Digital'
+  },
   errors: { name: 'Informe seu nome completo', email: 'Informe um e-mail válido', phone: 'Informe um WhatsApp brasileiro válido com DDD', consent: 'Autorize o recebimento das comunicações para continuar', checkout: 'As inscrições serão disponibilizadas em breve, volte aqui para garantir sua vaga', request: 'Não foi possível enviar seus dados, tente novamente', sending: 'Enviando sua inscrição' }
 } as const;
 

@@ -100,3 +100,21 @@
 
 .hintMouse{display:none}
 @media(min-width:1024px){.hintMouse{display:inline}}
+
+/* ===== COMPUTADOR, REDESENHO: titulo centralizado e prints em cards do mesmo tamanho ===== */
+@media(min-width:1024px){
+  .root h2{text-align:center;font-size:52px}
+  .lead{text-align:center;font-size:19px}
+  .carousel{margin-top:44px}
+  .messages{display:flex;flex-wrap:wrap;justify-content:center;columns:auto;gap:24px}
+  .message{flex:0 0 calc((100% - 48px)/3);height:300px;margin:0;padding:0;overflow:hidden;border-radius:20px;background:#0b141a;box-shadow:0 18px 40px #00151c2e}
+  .zoom{display:block;width:100%;height:100%}
+  .message img{width:100%;height:100%;max-width:none;max-height:none;object-fit:cover;object-position:top center;border-radius:0}
+  .hint{margin-top:30px}
+}
+@media(min-width:1280px){.message{flex-basis:calc((100% - 72px)/4);height:320px}}
+/* prints sem ampliar: largura inteira, centralizados; os altos comecam pelo topo */
+@media(min-width:1024px){
+  .zoom{display:flex;align-items:safe center;justify-content:center;width:100%;height:100%}
+  .message img{width:100%;height:auto;object-fit:initial}
+}

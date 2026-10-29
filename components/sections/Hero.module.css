@@ -61,3 +61,34 @@
     animation:rise .9s .15s cubic-bezier(.2,.7,.2,1) both,glowPulse 4s 1.2s ease-in-out infinite,sheen 7s 1.6s ease-in-out infinite;
   }
 }
+
+/* ===== COMPUTADOR, REDESENHO (1024px ou mais): texto e compra a esquerda, video grande a direita ===== */
+@media(min-width:1024px){
+  .root{padding:72px 0 96px}
+  .root::before{content:"";position:absolute;right:-6%;top:6%;width:62%;height:86%;background:radial-gradient(closest-side,#df922633,transparent 72%);pointer-events:none;z-index:0}
+  .grid{grid-template-columns:minmax(0,44fr) minmax(0,56fr);grid-template-areas:"intro video" "details video" "buy video";column-gap:64px;row-gap:0;align-items:start}
+  .intro{grid-area:intro}
+  .videoWrap{grid-area:video;align-self:center}
+  .details{grid-area:details}
+  .buy{grid-area:buy}
+  .eyebrow{display:block;font-size:13px;font-weight:700;letter-spacing:3.5px;text-transform:uppercase;color:#f2b04a;margin-bottom:18px}
+  .intro h1 span{font-size:62px;letter-spacing:-2.5px}
+  .intro h1 strong{font-size:clamp(108px,8.6vw,148px);letter-spacing:-5px;line-height:.92}
+  .intro p{font-size:23px;max-width:480px;margin-top:18px;color:#f4ede1}
+  .details{justify-content:flex-start;flex-wrap:wrap;gap:14px 28px;margin-top:28px}
+  .details>div{max-width:none;gap:10px}
+  .details svg{width:24px;height:24px}
+  .details span{font-size:17px;letter-spacing:.4px}
+  .priceLine{display:flex;align-items:baseline;gap:16px;margin:30px 0 22px}
+  .priceLine s{font-size:18px;color:#c9d6da;text-decoration-thickness:2px;text-decoration-color:#e04b3a}
+  .priceLine strong{font-family:var(--font-num),sans-serif;font-weight:800;font-size:64px;line-height:1;color:var(--mint);letter-spacing:0}
+  .buyCta{max-width:400px}
+  .buyCta a{min-height:62px;font-size:20px;border-radius:12px}
+  .realizacao{display:flex;align-items:center;gap:14px;margin-top:22px;font-size:13px;color:#c9d6da}
+  .realizacao img{width:78px!important}
+  .videoWrap>div:first-child{border:1px solid #df92268c;border-radius:20px;box-shadow:0 30px 70px #000a,0 0 0 6px #df922614}
+  .caption{margin-top:16px;text-align:center;font-size:14px;letter-spacing:2px;color:#c9d6da}
+  .root .coinOne,.root .coinTwo{display:none}
+  .root .coinThree{right:24px;bottom:-40px;top:auto;width:110px!important}
+}
+@media(min-width:1440px){.grid{column-gap:80px}}

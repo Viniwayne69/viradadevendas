@@ -22,3 +22,16 @@
 
 
 @media(min-width:1024px) and (hover:hover){.root li:hover{translate:0 -6px;border-color:#df922699;box-shadow:0 16px 34px #0007,0 0 0 1px #df922640}}
+
+/* ===== COMPUTADOR, REDESENHO: cards com icone, titulo e frase ===== */
+@media(min-width:1024px){
+  .root ul{gap:28px;margin:52px 0 56px}
+  .root li{align-items:flex-start;padding:32px 30px;gap:20px;border:1px solid #df922659;border-radius:20px;background:#03222c99}
+  .root li svg{width:44px;height:44px}
+  .txt{display:flex;flex-direction:column;gap:10px}
+  .txt>span{font-size:22px;font-weight:700;line-height:1.25}
+  .txt small{font-size:16px;line-height:1.45;color:#b9cdd3}
+  .root h3{font-size:42px}
+  .cta{max-width:420px;margin:0 auto}
+  .cta a{min-height:62px;font-size:19px}
+}

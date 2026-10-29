@@ -15,3 +15,14 @@
 
 /* ===== COMPUTADOR (1024px ou mais): só aqui; celular e tablet ficam como estão ===== */
 @media(min-width:1024px){.root h2{font-size:clamp(60px,5vw,76px);max-width:1000px}.root p{font-size:24px;max-width:820px;margin-top:28px}}
+
+/* ===== COMPUTADOR, REDESENHO: titulo a esquerda e 3 numeros a direita ===== */
+@media(min-width:1024px){
+  .wrap{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);align-items:center;gap:72px}
+  .root h2{font-size:clamp(54px,4.4vw,68px);max-width:none}
+  .root p{font-size:21px;max-width:520px;margin-top:24px}
+  .stats{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,1fr)}
+  .stats li{padding:8px 26px;border-left:1px solid #002d3c26;display:flex;flex-direction:column;gap:10px}
+  .stats strong{font-family:var(--font-num),sans-serif;font-weight:800;font-size:72px;line-height:.9;color:var(--mint)}
+  .stats span{font-size:16px;line-height:1.35;color:#274651;max-width:170px}
+}

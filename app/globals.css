@@ -37,3 +37,16 @@ p,li{text-wrap:pretty}
 @media(min-width:1024px) and (hover:hover) and (prefers-reduced-motion:no-preference){
   [data-dark]::after{background-position:0 calc(var(--p,0)*-120px)}
 }
+
+
+/* elementos que existem so no computador (1024px+) ou so no celular/tablet */
+@media(max-width:1023px){.desk{display:none!important}}
+@media(min-width:1024px){.mob{display:none!important}}
+
+/* computador: fundos escuros com mais vida (azul-petroleo da marca com luzes suaves), nao o quase-preto chapado */
+@media(min-width:1024px){
+  [data-dark]{background:radial-gradient(60% 85% at 88% 8%,#0e5a6e66 0%,transparent 62%),linear-gradient(140deg,#003a4c 0%,#002d3c 48%,#002533 100%)!important}
+  [data-dark]::after{opacity:.075}
+  .finale{background:radial-gradient(55% 80% at 90% 10%,#0e5a6e59 0%,transparent 62%),linear-gradient(180deg,#00384a,#002533 75%)}
+  .finale>section{background:transparent!important}
+}

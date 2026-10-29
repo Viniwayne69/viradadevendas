@@ -1,1 +1,17 @@
 .root{background:#002d3c;padding:9px 0}.row{display:flex;align-items:center;gap:7px;font-size:12px}.row>svg{color:var(--mint)}.row>strong{white-space:nowrap}@media(min-width:768px){.row{justify-content:center;gap:20px}}
+
+/* o grupo do contador nao muda nada no celular/tablet: os filhos continuam na mesma linha */
+.timer{display:contents}
+.timer>svg{color:var(--mint)}
+.timer>strong{white-space:nowrap}
+
+/* ===== COMPUTADOR (1024px ou mais): cabecalho fixo com logo, contador e botao ===== */
+@media(min-width:1024px){
+  .root{position:sticky;top:0;z-index:40;padding:12px 0;background:#00151ce6;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid #ffffff14}
+  .row{justify-content:space-between;gap:24px}
+  .logo{display:flex;align-items:flex-start;gap:3px}
+  .logo img:first-child{height:38px;width:auto}
+  .logo img:last-child{height:22px;width:auto}
+  .timer{display:flex;align-items:center;gap:14px;font-size:14px}
+  .cta a{width:auto;min-height:42px;padding:10px 22px;font-size:15px;border-radius:10px}
+}

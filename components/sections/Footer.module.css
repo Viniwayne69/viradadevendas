@@ -13,3 +13,12 @@
 .alle{display:flex;align-items:flex-start;justify-content:center;gap:5px;margin:6px 0 18px}
 .alle img:first-child{height:54px;width:auto}
 .alle img:last-child{height:36px;width:auto;margin-top:1px}
+
+/* ===== COMPUTADOR, REDESENHO: rodape em uma linha ===== */
+@media(min-width:1024px){
+  .root .wrap{display:flex;align-items:center;justify-content:space-between;gap:32px;padding-top:28px;border-top:1px solid #ffffff14}
+  .alle{margin:0}
+  .alle img:first-child{height:46px}
+  .alle img:last-child{height:28px}
+  .root p{margin:0;font-size:13px}
+}

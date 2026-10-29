@@ -23,3 +23,20 @@
   .role{font-size:26px;margin:8px 0 26px}
   .bio{font-size:21px;max-width:640px;line-height:1.55}
 }
+
+/* ===== COMPUTADOR, REDESENHO: foto recortada sobre bloco mostarda e texto ao lado ===== */
+@media(min-width:1024px){
+  .root{background:#fff}
+  .root h2{display:none}
+  .grid{grid-template-columns:520px 1fr;gap:88px;align-items:end}
+  .grid>img{display:none}
+  .cutout{position:relative;align-self:end}
+  .cutout::before{content:"";position:absolute;left:5%;right:5%;bottom:0;height:70%;border-radius:36px 36px 0 0;background:linear-gradient(165deg,#f6bf63,#df9226 70%)}
+  .cutout img{position:relative;z-index:1;display:block;width:100%;height:auto;aspect-ratio:auto;object-fit:contain;border-radius:0;background:none}
+  .grid>div:last-child{align-self:center;padding-bottom:0}
+  .eyebrow{display:block;font-size:13px;font-weight:700;letter-spacing:3.5px;text-transform:uppercase;color:#b4690f;margin-bottom:14px}
+  .grid h3{font-size:68px}
+  .creds{list-style:none;padding:0;margin:36px 0 0;display:flex;gap:40px}
+  .creds li{display:flex;align-items:center;gap:14px;font-size:18px;font-weight:700;color:#002d3c}
+  .creds svg{width:40px;height:40px;color:#df9226;stroke-width:1.6}
+}

@@ -23,3 +23,44 @@
 
 /* só o bloco "Para quem é": um cartão centralizado */
 @media(min-width:768px){.grid{grid-template-columns:1fr;max-width:760px;margin-inline:auto}}
+
+/* ===== COMPUTADOR, REDESENHO: lista a esquerda e um ingresso do evento a direita ===== */
+@media(min-width:1024px){
+  .grid{grid-template-columns:minmax(0,1fr) minmax(0,.85fr);max-width:none;align-items:center;gap:96px}
+  .grid article{background:none;border:0;box-shadow:none;padding:0}
+  @media(hover:hover){.grid article:hover{translate:none;box-shadow:none}}
+  .grid h2{font-size:64px}
+  .grid ul{gap:24px;margin-top:36px}
+  .grid li{font-size:21px;align-items:center}
+  .ticket{position:relative;justify-self:end;width:100%;max-width:460px;padding:34px 36px 30px;border-radius:26px;background:linear-gradient(160deg,#0b3442,#04202a 60%);border:1px solid #df922673;box-shadow:0 34px 70px #0009,inset 0 1px 0 #ffffff1a;rotate:-2.5deg}
+  .tTop{display:flex;justify-content:space-between;align-items:center}
+  .tLabel{font-size:12px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#f2b04a}
+  .tName{margin-top:14px;font-family:var(--font-heading),sans-serif;font-style:italic;font-weight:900;font-size:40px;line-height:1;letter-spacing:-1.5px;color:#fff8ee}
+  .tDate{display:flex;align-items:baseline;gap:10px;margin-top:22px;font-family:var(--font-num),sans-serif;text-transform:uppercase}
+  .tDate strong{font-size:96px;line-height:.85;font-weight:800;color:var(--mint)}
+  .tDate span{font-size:36px;font-weight:700;color:#fff8ee}
+  .tInfo{list-style:none;padding:0;margin:20px 0 0;display:grid;gap:10px}
+  .tInfo li{display:flex;align-items:center;gap:10px;font-size:17px;color:#d6e2e6}
+  .tInfo svg{width:20px;height:20px;color:#f2b04a}
+  .tCut{position:relative;margin:26px -36px 22px;border-top:2px dashed #df922659}
+  .tCut::before,.tCut::after{content:"";position:absolute;top:-14px;width:26px;height:26px;border-radius:50%;background:#00151c}
+  .tCut::before{left:-13px}
+  .tCut::after{right:-13px}
+  .tFoot{display:flex;justify-content:space-between;align-items:center;font-size:15px;color:#d6e2e6}
+  .tBrand{display:flex;align-items:center;gap:10px;font-size:12px;color:#9fb5bc}
+  .tBrand img{width:64px!important}
+}
+/* computador: ingresso em papel creme, contrastando com o fundo escuro */
+@media(min-width:1024px){
+  .ticket{background:linear-gradient(160deg,#fffaf2 0%,#f7ecdb 100%);border:0;box-shadow:0 30px 60px #00151c80,0 0 0 1px #ffffff40}
+  .tLabel{color:#b4690f}
+  .tName{color:#002d3c}
+  .tDate span{color:#002d3c}
+  .tInfo li{color:#274651}
+  .tInfo svg{color:#df9226}
+  .tCut{border-top-color:#002d3c33}
+  .tCut::before,.tCut::after{background:#002d3c}
+  .tFoot{color:#274651;font-weight:600}
+  .tBrand{color:#5d7780}
+  .tBrand img{filter:brightness(0);opacity:.8}
+}
