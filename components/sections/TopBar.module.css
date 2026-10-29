@@ -15,3 +15,5 @@
   .timer{display:flex;align-items:center;gap:14px;font-size:14px}
   .cta a{width:auto;min-height:42px;padding:10px 22px;font-size:15px;border-radius:10px}
 }
+/* paleta da marca: ícone do contador em laranja */
+.row>svg,.timer>svg{color:var(--laranja-claro)}

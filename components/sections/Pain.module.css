@@ -35,3 +35,8 @@
   .cta{max-width:420px;margin:0 auto}
   .cta a{min-height:62px;font-size:19px}
 }
+
+/* paleta da marca: ícones e destaque em laranja */
+.root li svg{color:#ee7a3c}
+@media(hover:hover){.root li:hover{border-color:#ee7a3c}}
+@media(min-width:1024px) and (hover:hover){.root li:hover{border-color:#ee7a3c99;box-shadow:0 16px 34px #0007,0 0 0 1px #ee7a3c40}}

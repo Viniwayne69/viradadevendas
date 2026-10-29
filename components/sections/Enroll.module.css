@@ -37,3 +37,12 @@
   .secure{display:flex;align-items:center;justify-content:center;gap:8px;margin-top:16px;font-size:14px;color:#9fb5bc}
   .secure svg{width:16px;height:16px}
 }
+
+/* paleta da marca: selo bordô e detalhes laranja no card de inscrição */
+@media(min-width:1024px){
+  .grid{border-color:#e0642799}
+  .badge{background:var(--bordo);box-shadow:0 0 0 1px #ffffff26}
+  .event svg{color:var(--laranja-claro)}
+  .incTitle{color:var(--laranja-claro)}
+  .inc svg{color:var(--laranja-claro)}
+}

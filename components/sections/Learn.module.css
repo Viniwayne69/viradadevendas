@@ -53,3 +53,9 @@
   .title{font-size:21px;font-weight:800;line-height:1.25;margin-top:10px}
   .root li small{font-size:16px;line-height:1.45;color:#3e5860}
 }
+
+/* paleta da marca: numeração em laranja */
+.root li span{background:var(--laranja)}
+@media(min-width:1024px){
+  .root li .num,:global([data-armed]) .root li:not(:global(.r-in)) .num{background:none;color:var(--laranja-claro)}
+}

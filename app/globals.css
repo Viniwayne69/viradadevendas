@@ -50,3 +50,8 @@ p,li{text-wrap:pretty}
   .finale{background:radial-gradient(55% 80% at 90% 10%,#0e5a6e59 0%,transparent 62%),linear-gradient(180deg,#00384a,#002533 75%)}
   .finale>section{background:transparent!important}
 }
+
+/* ===== PALETA DA MARCA: laranja nos pontos de ação, bordô nos blocos de peso ===== */
+:root{--laranja:#e06427;--laranja-claro:#ee7a3c;--bordo:#85161a;--bordo-fundo:#5e0f12}
+.price{color:var(--laranja-claro)}
+.scroll-progress{background:linear-gradient(90deg,#df9226,#e06427);box-shadow:none}

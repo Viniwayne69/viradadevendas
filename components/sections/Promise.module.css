@@ -26,3 +26,6 @@
   .stats strong{font-family:var(--font-num),sans-serif;font-weight:800;font-size:72px;line-height:.9;color:var(--mint)}
   .stats span{font-size:16px;line-height:1.35;color:#274651;max-width:170px}
 }
+
+/* paleta da marca: números em laranja */
+.stats strong{color:var(--laranja-claro)}

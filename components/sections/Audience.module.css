@@ -64,3 +64,10 @@
   .tBrand{color:#5d7780}
   .tBrand img{filter:brightness(0);opacity:.8}
 }
+
+/* paleta da marca: data do ingresso em bordô */
+@media(min-width:1024px){
+  .tDate strong{color:var(--bordo)}
+  .tLabel{color:var(--laranja)}
+  .tInfo svg{color:var(--laranja)}
+}

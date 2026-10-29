@@ -118,3 +118,33 @@
   .zoom{display:flex;align-items:safe center;justify-content:center;width:100%;height:100%}
   .message img{width:100%;height:auto;object-fit:initial}
 }
+/* ===== DEPOIMENTOS EM CARDS (todas as telas) ===== */
+.quotes{display:flex;align-items:stretch;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;margin:18px -22px 0;padding:6px 22px 16px;scrollbar-width:none;overscroll-behavior-x:contain}
+.quotes::-webkit-scrollbar{display:none}
+.qcard{flex:0 0 86%;scroll-snap-align:center;margin:0;display:flex;flex-direction:column;background:#fff8ee;border:1px solid #f0e3cd;border-radius:20px;padding:22px 20px 18px;box-shadow:0 1px 2px #00151c0d,0 12px 28px #00151c14}
+.qmark{width:30px;height:30px;color:#df9226;fill:#df922626;flex-shrink:0}
+.qhigh{margin-top:12px;font-family:var(--font-heading),sans-serif;font-style:italic;font-weight:800;font-size:20px;line-height:1.15;letter-spacing:-.4px;color:#002d3c}
+.qtext{margin:10px 0 0;font-size:15px;line-height:1.55;color:#30444a}
+.qtext[data-clamp]{display:-webkit-box;-webkit-line-clamp:6;-webkit-box-orient:vertical;overflow:hidden}
+.qmore{align-self:flex-start;margin-top:8px;padding:4px 0;border:0;background:none;color:#b4690f;font-weight:700;font-size:14px;text-decoration:underline;text-underline-offset:3px}
+.qfoot{margin-top:auto;padding-top:16px;display:flex;align-items:center;gap:10px;font-size:13px;font-weight:600;color:#5d7780}
+.qline{width:22px;height:2px;border-radius:2px;background:#df9226}
+.qhint{text-align:center;font-size:13px;color:#51737f;margin-top:4px}
+@media(min-width:768px){
+  .quotes{display:block;columns:2;column-gap:20px;overflow:visible;margin:30px 0 0;padding:0}
+  .qcard{break-inside:avoid;margin-bottom:20px;padding:28px 26px 22px}
+  .qhint{display:none}
+}
+@media(min-width:1024px){
+  .quotes{columns:3;column-gap:28px;margin-top:44px}
+  .qcard{margin-bottom:28px;padding:32px 30px 26px;border-radius:24px}
+  .qhigh{font-size:24px}
+  .qtext{font-size:16px}
+  .qcard{transition:translate .25s ease,box-shadow .25s ease}
+}
+@media(min-width:1024px) and (hover:hover){.qcard:hover{translate:0 -4px;box-shadow:0 2px 4px #00151c14,0 22px 44px #00151c24}}
+
+/* paleta da marca: aspas e traços dos depoimentos em laranja */
+.qmark{color:var(--laranja)}
+.qline{background:var(--laranja)}
+.qmore{color:var(--bordo)}
